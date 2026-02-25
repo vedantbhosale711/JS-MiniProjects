@@ -1,4 +1,5 @@
 const body = document.body;
+const buttons = document.querySelectorAll('.button');
 
 const colors = {
   grey: 'rgb(159, 159, 159)',
@@ -9,7 +10,7 @@ const colors = {
 
 buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    body.style.backgroundColor = colors[e.target.id];
+    body.style.backgroundColor = colors[e.currentTarget.id];
   });
 });
 
