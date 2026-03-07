@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div id="left-panel">
+        <div class="top-div">
+          <div class="unit-toggle">
+            <span>°C</span>
+            <label class="switch">
+              <input type="checkbox" id="unitSwitch" />
+              <span class="slider"></span>
+            </label>
+            <span>°F</span>
+          </div>
+          <div class="swich-mode">
+            <img id="mode-icon" src="assets/icons/light-mode1.svg" alt="" />
+          </div>
+        </div>
+        <div class="citydate">
+          <div id="city-name">New-york, USA</div>
+          <div id="date">1st march 2026</div>
+        </div>
+        <div id="temperature-weather-today">
+          <div id="temperature-today-div">27&deg;</div>
+          <div id="weather-today-div">
+            <img
+              src="assets/icons/black-sun.svg"
+              alt="sun icon"
+              height="30px"
+              width="30px"
+              style="filter: invert(1)"
+            />
+            <div id="weather-today">Sunny</div>
+          </div>
+        </div>
+      </div>
+      <!--------------------------------------------------------------->
+      <div id="right-panel">
+        <div id="right-header">
+          <div id="welcome-div">
+            <div id="welcome-id">Welcome!</div>
+            <div id="welcome-text">Check out today's weather information</div>
+          </div>
+          <input type="text" id="city-input" placeholder="Enter city" />
+          <button id="search-btn">Search</button>
+          <div id="hamburger-wrapper">
+            <img id="hamburger" src="assets/icons/hamburger.svg" alt="" />
+          </div>
+        </div>
+
+        <div id="graph-div">
+          <div id="graph-header">Hourly Temperature</div>
+          <div id="graph">
+            <canvas id="tempChart"></canvas>
+          </div>
+        </div>
+
+        <div id="more-details">
+          <div id="more-details-text">More details on today's weather</div>
+
+          <div id="cards-container">
+            <div class="cards" id="humidity">
+              <div class="cards-header">
+                <div class="card-title">Humidity</div>
+                <div class="card-icon-wrapper">
+                  <img
+                    class="card-icon"
+                    src="assets/icons/drop-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card-content"></div>
+            </div>
+
+            <div class="cards" id="wind">
+              <div class="cards-header">
+                <div class="card-title">Wind</div>
+                <div class="card-icon-wrapper">
+                  <img
+                    class="card-icon"
+                    src="assets/icons/black-wind.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card-content"></div>
+            </div>
+
+            <div class="cards" id="precipitation">
+              <div class="cards-header">
+                <div class="card-title">Precipitation</div>
+                <div class="card-icon-wrapper">
+                  <img
+                    class="card-icon"
+                    src="assets/icons/black-rain.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card-content"></div>
+            </div>
+
+            <div class="cards" id="uv-index">
+              <div class="cards-header">
+                <div class="card-title">UV-index</div>
+                <div class="card-icon-wrapper">
+                  <img
+                    class="card-icon"
+                    src="assets/icons/black-sun.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card-content"></div>
+            </div>
+
+            <div class="cards" id="feels-like">
+              <div class="cards-header">
+                <div class="card-title">Feels like</div>
+                <div class="card-icon-wrapper">
+                  <img
+                    class="card-icon"
+                    src="assets/icons/black-thermometer1.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card-content"></div>
+            </div>
+
+            <div class="cards" id="chance-of-rain">
+              <div class="cards-header">
+                <div class="card-title">Chance of rain</div>
+                <div class="card-icon-wrapper">
+                  <img
+                    class="card-icon"
+                    src="assets/icons/umbrella-svgrepo-com.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="card-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
